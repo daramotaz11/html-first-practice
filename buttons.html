@@ -9,6 +9,16 @@
     width: 105px;
     cursor: pointer;
     margin-right: 8px; /*this will add a space to the right of the button*/
+    transition: opacity 0.15s; /*this will make the button fade in and out when hovered over*/
+
+}
+
+.subscribe-button:hover{ /*this will change the color of the button when hovered over*/
+    opacity: 0.7;
+}
+
+.subscribe-button:active{ /*this will change the color of the button when clicked*/
+  opacity: 0.4;
 }
 
 .join-button{ /*this will only edit the join button*/
@@ -21,6 +31,17 @@
     height: 36px;
     width: 62px;
     cursor: pointer;
+    transition: background-color 0.15s,
+    color 0.15s; /*we want a transition for the background and text so we use a comma to add more transitions*/
+}
+
+.join-button:hover{
+    background-color: rgb(27, 153, 236);
+    color: white;
+}
+
+.join-button:active{
+    opacity: 0.4;
 }
 
 .tweet-button{ /*this will only edit the tweet button*/
@@ -33,14 +54,19 @@
     font-weight: bold;
     font-size: 15px;
     cursor: pointer;
-    margin-left: 8px
+    margin-left: 8px;
+    transition: box-shadow 0.15s;
+}
+
+.tweet-button:hover{
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.15); /*1st value= horizontal position of shadow to right, 2nd= vertical position of shadow, 3rd= blur */
 }
 
 </style>
 
-<button class="subscribe-button"> <!--u use button class= "" to name a button so u can edit it individually-->
-  SUBSCRIBE
-</button> 
+<a href= "https://www.youtube.com/" target="_blank"> 
+    <button class="subscribe-button">SUBSCRIBE</button> <!--u use button class= "" to name a button so u can edit it individually-->
+</a>
 
 <button class="join-button">
   JOIN
